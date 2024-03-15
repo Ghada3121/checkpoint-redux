@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import {useSelector} from "react-redux";
 import TaskItem from "../TaskItem/TaskItem";
 const TaskList = () => {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { delete_task } from "../../Redux/Actions/action";
+import { delete_task, done_task } from "../../Redux/Actions/action";
 import EditTask from "../EditTask/EditTask";
-import { done_task } from "../Redux/Actions/action";
+
 const TaskItem = ({ task }) => {
   const dispatch = useDispatch();
   const handleDone = (id) => {
@@ -44,7 +44,12 @@ const TaskItem = ({ task }) => {
           </Button>
         </Card.Body>
       </Card>
-      <EditTask show={show} handleClose={handleClose} handleSave={handleSave} task={task} />
+      <EditTask
+        show={show}
+        handleClose={handleClose}
+        handleSave={handleSave}
+        task={task}
+      />
     </>
   );
 };
